@@ -52,9 +52,9 @@ function renderMiniMap(posX = 0, posY = 0, scale = 1, rays) {
 
   for (let i = 0; i < map.length; ++i) {
     for (let j = 0; j < map[i].length; ++j) {
-      if (map[j][i] == 1) {
+      if (map[i][j] == 1) {
         context.fillStyle = "grey";
-        context.fillRect(posX + i * cellSize, posY + j * cellSize, cellSize, cellSize);
+        context.fillRect(posX + j * cellSize, posY + i * cellSize, cellSize, cellSize);
       }
     }
   }
